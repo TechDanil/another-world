@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="resources/css/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <title>Another world</title>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2 class="title">Станьте героем новой реальности</h2>
+        <video class="hero__video" controls>
+          <source src="resources/assets/videos/file_example_MP4_1280_10MG.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <!-- <section class="area">
+      <div class="container">
+        <h2 class="title">Зоны развлечений Another World</h2>
+        <ul class="area__card-list" id="cardList">
+          
+        </ul>
+      </div>
+    </section> -->
+    <section class="tariff">
+      <div class="container">
+        <h2 class="title">Выберите подходящий вам тариф</h2>
+        <div class="tariff__slider">
+          <ul class="tariff__options">
+            <li class="tariff-option">
+              Арена
+            </li>
+            <li class="tariff-option tariff-option_active">
+              День рождения
+  
+            </li>
+            <li class="tariff-option">Корпоратив</li>
+            <li class="tariff-option">Тимбилдинг</li>
+            <li class="tariff-option">Выпускной</li>
+            <li class="tariff-option">Новый год</li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+        <ul class="tariff__cards">
+          <li class="tariff-card">
+            <div class="tariff-card__icon">
+              <img src="./resources/assets/icons/tariff/base-tariff.svg" alt="базовый тариф" />
+            </div>
+            <h3 class="tariff__title">Базовый</h3>
+            <p class="tariff__descr">День рождения в VR</p>
+            <ul class="tariff__game-options">
+              <li class="tariff__game-option">8 человек</li>
+              <li class="tariff__game-option">3 часа игры</li>
+              <li class="tariff__game-option">2 игры</li>
+            </ul>
+
+            <div class="tariff__content">
+              <div>
+                <p class="tariff__content-day">Пн-Чт</p>
+                <div class="tariff__content-divider"></div>
+                <span class="tariff__content-price">25 900 ₽</span>
+              </div>
+              <div>
+                <p class="tariff__content-day">Пт-ВС</p>
+                <div class="tariff__content-divider"></div>
+                <span class="tariff__content-price">48 900 ₽</span>
+              </div>
+            </div>
+            <button class="button">
+              Забронировать игру
+              <div class="button__icon">
+                <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+              </div>
+            </button>
+          </li>
+          <li class="tariff-card">
+            <div class="tariff-card__wrapper">
+              <div class="tariff-card__icon">
+                <img src="./resources/assets/icons/tariff/optimal-tariff.svg" alt="базовый тариф" />
+              </div>
+              <h3 class="tariff__title">Оптимальный</h3>
+              <p class="tariff__descr">День рождения в VR</p>
+              <ul class="tariff__game-options">
+                <li class="tariff__game-option">8 человек</li>
+                <li class="tariff__game-option">3 часа игры</li>
+                <li class="tariff__game-option">2 игры</li>
+              </ul>
+  
+              <div class="tariff__content">
+                <div>
+                  <p class="tariff__content-day">Пн-Чт</p>
+                  <div class="tariff__content-divider"></div>
+                  <span class="tariff__content-price">25 900 ₽</span>
+                </div>
+                <div>
+                  <p class="tariff__content-day">Пт-ВС</p>
+                  <div class="tariff__content-divider"></div>
+                  <span class="tariff__content-price">48 900 ₽</span>
+                </div>
+              </div>
+              <button class="button">
+                Забронировать игру
+                <div class="button__icon">
+                  <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+                </div>
+              </button>
+            </div>
+          </li>
+          <li class="tariff-card">
+            <div class="tariff-card__icon">
+              <img src="./resources/assets/icons/tariff/premium-tariff.svg" alt="базовый тариф" />
+            </div>
+            <h3 class="tariff__title">Премиум</h3>
+            <p class="tariff__descr">День рождения в VR</p>
+            <ul class="tariff__game-options">
+              <li class="tariff__game-option">8 человек</li>
+              <li class="tariff__game-option">3 часа игры</li>
+              <li class="tariff__game-option">2 игры</li>
+            </ul>
+
+            <div class="tariff__content">
+              <div>
+                <p class="tariff__content-day">Пн-Чт</p>
+                <div class="tariff__content-divider"></div>
+                <span class="tariff__content-price">25 900 ₽</span>
+              </div>
+              <div>
+                <p class="tariff__content-day">Пт-ВС</p>
+                <div class="tariff__content-divider"></div>
+                <span class="tariff__content-price">48 900 ₽</span>
+              </div>
+            </div>
+            <button class="button">
+              Забронировать игру
+              <div class="button__icon">
+                <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+              </div>
+            </button>
+          </li>
+          <li class="tariff-card">
+            <div class="tariff-card__icon">
+              <img src="./resources/assets/icons/tariff/maximum-tariff.svg" alt="базовый тариф" />
+            </div>
+            <h3 class="tariff__title">Максимальный</h3>
+            <p class="tariff__descr">День рождения в VR</p>
+            <ul class="tariff__game-options">
+              <li class="tariff__game-option">8 человек</li>
+              <li class="tariff__game-option">3 часа игры</li>
+              <li class="tariff__game-option">2 игры</li>
+            </ul>
+
+            <div class="tariff__content">
+              <div>
+                <p class="tariff__content-day">Пн-Чт</p>
+                <div class="tariff__content-divider"></div>
+                <span class="tariff__content-price">25 900 ₽</span>
+              </div>
+              <div>
+                <p class="tariff__content-day">Пт-ВС</p>
+                <div class="tariff__content-divider"></div>
+                <span class="tariff__content-price">48 900 ₽</span>
+              </div>
+            </div>
+            <button class="button">
+              Забронировать игру
+              <div class="button__icon">
+                <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </main>
+
+  <script src="./resources/js/index.js"></script>
+</body>
+
+</html>

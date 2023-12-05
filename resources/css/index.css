@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+source {
+    padding: 0;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 31px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #ea0046;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 28px;
+    width: 277px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 1340px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 60px auto 0;
+    color: #fff;
+    width: 622px;
+    font-size: 56px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.divider {
+    margin-top: 24px;
+    border: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+.area__card-list__item-title, .area__card-list__item-subtitle {
+    font-weight: 400;
+}
+
+.hero .hero__video {
+    display: block;
+    margin: 60px auto 0;
+    text-align: center;
+    width: 1340px;
+    height: 740px;
+}
+
+.area {
+    padding-top: 185px;
+}
+
+.area .area__card-list {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.area .area__card-list .area__card-list__item {
+    position: relative;
+    width: 1110px;
+    min-height: 442px;
+    background: url('../assets/icons/bg/area-card-bg.svg') center center / contain no-repeat;
+}
+
+.area .area__card-list .area__card-list__item .area__card-list__item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.area .area__card-list .area__card-list__item .area__card-list__item-wrapper .area__card-list__item-number__img {
+    top: 0;
+    left: -243px;
+    position: absolute;
+    display: block;
+    height: 24px;
+}
+
+.area .area__card-list .area__card-list__item .area__card-list__item-wrapper div {
+    width: 100%;
+    margin-left: 75px;
+}
+
+.area .area__card-list .area__card-list__item .area__card-list__item-title {
+    color: #fff;
+    font-size: 36px;
+    width: 258px;
+}
+
+.area .area__card-list .area__card-list__item .area__card-list__item-subtitle {
+    margin-top: 34px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    width: 271px;
+    font-size: 18px;
+}
+
+.area .area__card-list .area__card-list__item img {
+    display: block;
+    width: 575px;
+    height: 442px;
+}
+
+.tariff {
+    padding-top: 180px;
+}
+
+.tariff  .tariff__cards {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tariff .tariff__options {
+    display: flex;
+    width: 780px;
+    margin: 60px auto 0;
+    justify-content: space-between;
+}
+
+.tariff .tariff__options .tariff-option {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgba(255,255,255, 0.5);
+}
+
+.tariff .tariff__options .tariff-option.tariff-option_active {
+    color: #fff;
+}
+
+.tariff .tariff__cards .tariff-card {
+    position: relative;
+    padding: 47px 19px;
+    width: 317px;
+    min-height: 456px;
+    border-radius: 16px;
+    background: linear-gradient(#0c0c16, #0c0c16) padding-box, linear-gradient(to bottom, #ffffff1a, #fff) border-box;
+    border: 1px solid transparent;
+}
+
+.tariff .tariff__cards .tariff-card .tariff-card__icon {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tariff .tariff__cards .tariff-card .tariff__title {
+    margin-top: 10px;
+    font-size: 28px;
+    line-height: 37px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.tariff .tariff__cards .tariff-card .tariff__descr {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tariff .tariff__cards .tariff-card .tariff__game-options {
+    margin-top: 29px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tariff .tariff__cards .tariff-card .tariff__game-options .tariff__game-option{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 10px 4px 10px;
+    background-color: #203255;
+}
+
+.tariff .tariff__cards .tariff-card .tariff__content {
+    margin-top: 31px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    background-color: #141720;
+    width: 277px;
+    border-radius: 8px;
+    padding: 26px 16px;
+}
+
+.tariff .tariff__cards .tariff-card .tariff__content .tariff__content-divider {
+    border: 1px rgba(255,255,255, 0.4) dotted;
+    width: 61px;
+}
+
+.tariff .tariff__cards .tariff-card .tariff__content .tariff__content-day {
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+}
+
+.tariff .tariff__cards .tariff-card .tariff__content .tariff__content-price {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.tariff .tariff__cards .tariff-card .tariff__content > div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+@media (max-width: 1400px) {
+    .hero .hero__video {
+        width: 971px;
+    }
+    
+    .container {
+        max-width: 993px;
+    }
+
+    .tariff .tariff__cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(304px, auto));
+        gap: 54px 24px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero .hero__video {
+        width: 970px;
+    }
+
+    .tariff .tariff__cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(304px, auto));
+        justify-content: center;
+        gap: 80px 24px;
+    }
+
+    .area .area__card-list .area__card-list__item {
+        width: 982px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+
+    .hero .hero__video {
+        width: 733px;
+    }
+
+    .tariff .tariff__options {
+        width: 700px;
+    }
+
+    .area .area__card-list .area__card-list__item {
+        width: 704px;
+        min-height: 281px;
+    }
+
+    .area .area__card-list .area__card-list__item img {
+        display: block;
+        width: 342px;
+        height: 281px;
+    }
+
+    .area .area__card-list .area__card-list__item .area__card-list__item-wrapper .area__card-list__item-number__img {
+        left: -143px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .title {
+        font-size: 36px;
+        width: 412px;
+        margin-top: 40px;
+    }
+
+    .hero .hero__video {
+        margin-top: 40px;
+        width: 541px;
+        height: 390px;
+    }
+
+    .area .title {
+        width: 361px;
+    }
+    
+    .tariff .tariff__cards {
+        display: grid;
+        grid-template-columns: minmax(304px, auto);
+        gap: 80px 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tariff .tariff__options {
+        width: 520px;
+    }
+
+    .tariff .tariff__options .tariff-option {
+        font-size: 14px;
+    }
+
+    .area .area__card-list {
+        margin-top: 40px;
+    }
+    .area .area__card-list .area__card-list__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .area .area__card-list .area__card-list__item img {
+        display: block;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .hero .hero__video {
+        margin-top: 40px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tariff {
+        padding-top: 90px;
+
+    }
+
+    .title {
+        font-size: 24px;
+        width: 272px;
+    }
+
+    .tariff .tariff__slider {
+        overflow-x: scroll;
+    }
+}
