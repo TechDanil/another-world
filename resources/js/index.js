@@ -376,8 +376,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    appendTariffCards('tariffCardsContainer', tariffs);
-    showTariffCards(0);
+    // appendTariffCards('tariffCardsContainer', tariffs);
+    // showTariffCards(0);
 
     // areaCards.forEach((item) => {
     //     const listItem = document.createElement("li");

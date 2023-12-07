@@ -68,7 +68,6 @@ source {
 }
 
 .divider {
-    position: relative;
     margin-top: 24px;
     border: 1px rgba(255, 255, 255, 0.2) solid;
 }
@@ -177,20 +176,11 @@ source {
     z-index: 1;
 }
 
-.tariff .tariff-select {
-    display: none;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);;
-}
 
-.tariff-option_active .gradient-select {
-    display: block;
-}
 
-/* .tariff .tariff__wrapper {
-    display: flex;
+/* .tariff .tariff-select svg {
+    width: 188px; 
+    height: 24px; 
 } */
 
 .tariff  .tariff__cards.inactive {
@@ -216,6 +206,21 @@ source {
     font-size: 18px;
     font-weight: 800;
     color: rgba(255,255,255, 0.5);
+}
+
+.tariff .tariff__options .tariff-option.tariff-option_active::after {
+    content: '';
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    width: 134px;
+    height: 100%;
+    background: url('../assets/icons/tariff/select.svg') center center / cover no-repeat;
+    z-index: -1;
+}
+
+.tariff .tariff__options .tariff-option.tariff-option_active:first-child:after {
+    left: -36px;
 }
 
 .tariff .tariff__options .tariff-option.tariff-option_active {
@@ -405,6 +410,21 @@ source {
     .tariff .tariff__options {
         width: 520px;
     }
+    
+    .tariff .tariff__options .tariff-option.tariff-option_active::after {
+        content: '';
+        position: absolute;
+        bottom: -34px;
+        left: 0;
+        width: 105px;
+        height: 100%;
+        background: url('../assets/icons/tariff/select.svg') center center / cover no-repeat;
+        z-index: -1;
+    }
+
+    .tariff .tariff__options .tariff-option.tariff-option_active:first-child:after {
+        left: -9px;
+    }
 
     .tariff .tariff__options .tariff-option {
         font-size: 14px;
@@ -436,6 +456,10 @@ source {
         height: 100%;
     }
 
+    .divider {
+        width: 520px;
+    }
+
     .tariff {
         padding-top: 90px;
     }
@@ -447,6 +471,7 @@ source {
 
     .tariff .tariff__slider {
         overflow-x: scroll;
+        width: 100%;
     }
 
     .tariff .tariff__cards .tariff-card .tariff__title {
