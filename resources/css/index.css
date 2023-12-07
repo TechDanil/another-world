@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'Audiowide';
+    font-display: swap;
+    src: local('MuseoSansCyrl-400'),
+        url('../assets/fonts/Audiowide-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Feature Mono';
+    font-display: swap;
+    src: local('FeatureMono-400'),
+        url('../assets/fonts/FeatureMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,6 +23,7 @@
 }
 
 body {
+    font-family: 'Feature Mono', Fallback, sans-serif;
     background-color: #000;
 }
 
@@ -42,13 +61,14 @@ source {
 .title {
     margin: 60px auto 0;
     color: #fff;
-    width: 622px;
+    width: 730px;
     font-size: 56px;
     font-weight: 400;
     text-align: center;
 }
 
 .divider {
+    position: relative;
     margin-top: 24px;
     border: 1px rgba(255, 255, 255, 0.2) solid;
 }
@@ -127,6 +147,56 @@ source {
     padding-top: 180px;
 }
 
+.gradient-shadow {
+    display: inline-block;
+	position: relative;
+}
+
+.gradient-shadow::before {
+    content: '';
+    display: block;
+    width:calc(100% + 10px);
+    height: 58%;
+    border-radius: 12px;
+    background-image: linear-gradient(83deg, transparent, #246FFF);
+    filter: blur(10px);
+    position: absolute;
+    left: 47%;
+    top: 73%;
+    transform: translate(-49%, -50%)
+}
+
+.gradient-shadow__inner {
+    width: 100%;
+	height: 100%;
+    background: linear-gradient(#0c0c16, #0c0c16) padding-box, linear-gradient(to bottom, #ffffff1a, #fff) border-box;
+    border: 1px solid transparent;
+	border-radius: 12px;
+	background-color: #000;
+	position: relative;
+    z-index: 1;
+}
+
+.tariff .tariff-select {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);;
+}
+
+.tariff-option_active .gradient-select {
+    display: block;
+}
+
+/* .tariff .tariff__wrapper {
+    display: flex;
+} */
+
+.tariff  .tariff__cards.inactive {
+    display: none;
+}
+
 .tariff  .tariff__cards {
     margin-top: 90px;
     display: flex;
@@ -141,6 +211,7 @@ source {
 }
 
 .tariff .tariff__options .tariff-option {
+    position: relative;
     cursor: pointer;
     font-size: 18px;
     font-weight: 800;
@@ -152,13 +223,18 @@ source {
 }
 
 .tariff .tariff__cards .tariff-card {
+    display: inline-block;
     position: relative;
-    padding: 47px 19px;
+    z-index: 100;
     width: 317px;
     min-height: 456px;
     border-radius: 16px;
-    background: linear-gradient(#0c0c16, #0c0c16) padding-box, linear-gradient(to bottom, #ffffff1a, #fff) border-box;
+    background: #0C0C16;
     border: 1px solid transparent;
+}
+
+.tariff .tariff__cards .tariff-card .tariff-card__wrapper {
+    padding: 47px 19px;
 }
 
 .tariff .tariff__cards .tariff-card .tariff-card__icon {
@@ -191,8 +267,8 @@ source {
     justify-content: space-around;
 }
 
-.tariff .tariff__cards .tariff-card .tariff__game-options .tariff__game-option{
-    font-size: 17px;
+.tariff .tariff__cards .tariff-card .tariff__game-options .tariff__game-option {
+    font-size: 13px;
     font-weight: 400;
     color: #fff;
     border-radius: 4px;
@@ -218,12 +294,12 @@ source {
 
 .tariff .tariff__cards .tariff-card .tariff__content .tariff__content-day {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 14px;
     color: #fff;
 }
 
 .tariff .tariff__cards .tariff-card .tariff__content .tariff__content-price {
-    font-size: 30px;
+    font-size: 24px;
     color: #fff;
     font-weight: 400;
 }
@@ -362,15 +438,18 @@ source {
 
     .tariff {
         padding-top: 90px;
-
     }
 
     .title {
         font-size: 24px;
-        width: 272px;
+        width: 327px;
     }
 
     .tariff .tariff__slider {
         overflow-x: scroll;
+    }
+
+    .tariff .tariff__cards .tariff-card .tariff__title {
+        font-size: 20px;
     }
 }
