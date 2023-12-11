@@ -29,10 +29,44 @@ document.addEventListener('DOMContentLoaded', function () {
     const tariffs = [
         [
             {
+                title: 'Пн–Чт',
+                description: 'Игра на арене в компании',
+                options: ['2-14 человек', '1 час игры'],
+                imgSource: 'resources/assets/icons/tariff/weekday-tariff.svg',
+                days: {
+                    weekday: '10:00–14:00',
+                    weekend: '14:00–22:00',
+                },
+                prices: {
+                    weekdays: '1000 ₽',
+                    weekends: '1100 ₽'
+                },
+            },
+
+            {
+                title: 'Выходной',
+                description: 'Игра на арене в компании',
+                options: ['2-14 человек', '1 час игры'],
+                imgSource: 'resources/assets/icons/tariff/weekend-tariff.svg',
+                days: {
+                    weekday: '10:00–22:00',
+                },
+                prices: {
+                    weekdays: '1200 ₽',
+                }
+            },
+        ],
+
+        [
+            {
                 title: 'Базовый',
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/base-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -44,6 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/optimal-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -55,6 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/premium-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -66,6 +108,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/maximum-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -79,6 +125,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/base-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -90,6 +140,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/optimal-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -101,6 +155,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/premium-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -112,6 +170,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/maximum-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -125,6 +187,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/base-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -136,6 +202,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/optimal-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -147,6 +217,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/premium-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -158,6 +232,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/maximum-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -171,6 +249,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/base-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -182,6 +264,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/optimal-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -193,6 +279,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/premium-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -204,6 +294,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/maximum-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -217,6 +311,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/base-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -228,6 +326,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/optimal-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -239,6 +341,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/premium-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -250,52 +356,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: 'День рождения в VR',
                 options: ['8 человек', '3 часа игры', '2 игры'],
                 imgSource: 'resources/assets/icons/tariff/maximum-tariff.svg',
-                prices: {
-                    weekdays: '25 900 ₽',
-                    weekends: '48 900 ₽'
-                }
-            },
-        ],
-
-        [
-            {
-                title: 'Базовый',
-                description: 'День рождения в VR',
-                options: ['8 человек', '3 часа игры', '2 игры'],
-                imgSource: 'resources/assets/icons/tariff/base-tariff.svg',
-                prices: {
-                    weekdays: '25 900 ₽',
-                    weekends: '48 900 ₽'
-                }
-            },
-
-            {
-                title: 'Оптимальный',
-                description: 'День рождения в VR',
-                options: ['8 человек', '3 часа игры', '2 игры'],
-                imgSource: 'resources/assets/icons/tariff/optimal-tariff.svg',
-                prices: {
-                    weekdays: '25 900 ₽',
-                    weekends: '48 900 ₽'
-                }
-            },
-
-            {
-                title: 'Премиум',
-                description: 'День рождения в VR',
-                options: ['8 человек', '3 часа игры', '2 игры'],
-                imgSource: 'resources/assets/icons/tariff/premium-tariff.svg',
-                prices: {
-                    weekdays: '25 900 ₽',
-                    weekends: '48 900 ₽'
-                }
-            },
-
-            {
-                title: 'Максимальный',
-                description: 'День рождения в VR',
-                options: ['8 человек', '3 часа игры', '2 игры'],
-                imgSource: 'resources/assets/icons/tariff/maximum-tariff.svg',
+                days: {
+                    weekday: 'Пн-Чт',
+                    weekend: 'Пт-Вс',
+                },
                 prices: {
                     weekdays: '25 900 ₽',
                     weekends: '48 900 ₽'
@@ -307,34 +371,42 @@ document.addEventListener('DOMContentLoaded', function () {
     function createTariffCard(tariff) {
         const card = document.createElement('li');
         card.classList.add('tariff-card');
+        card.classList.add('gradient-shadow');
 
         card.innerHTML = `
-            <div class="tariff-card__icon">
-                <img src="${tariff.imgSource}" alt="${tariff.title}" />
+            <div class="tariff-card__wrapper gradient-shadow__inner">
+                <div class="tariff-card__icon">
+                    <img src="${tariff.imgSource}" alt="${tariff.title}" />
+                </div>
+                <h3 class="tariff__title">${tariff.title}</h3>
+                <p class="tariff__descr">${tariff.description}</p>
+                <ul class="tariff__game-options">
+                    ${tariff.options.map(option => `<li class="tariff__game-option">${option}</li>`).join('')}
+                </ul>
+                <div class="tariff__content">
+                    <div>
+                        ${tariff.days.weekday
+                            ? `<p class="tariff__content-day">${tariff.days.weekday}</p>
+                            <div class="tariff__content-divider"></div>
+                            <span class="tariff__content-price">${tariff.prices.weekdays}</span>`
+                            : ''}
+                    </div>
+                    <div>
+                        ${tariff.days.weekend
+                            ? `<p class="tariff__content-day">${tariff.days.weekend}</p>
+                            <div class="tariff__content-divider"></div>
+                            <span class="tariff__content-price">${tariff.prices.weekends}</span>`
+                            : ''}
+                    </div>
+                </div>
+                <button class="button">
+                    Забронировать игру
+                    <div class="button__icon">
+                        <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+                    </div>
+                </button>
             </div>
-            <h3 class="tariff__title">${tariff.title}</h3>
-            <p class="tariff__descr">${tariff.description}</p>
-            <ul class="tariff__game-options">
-                ${tariff.options.map(option => `<li class="tariff__game-option">${option}</li>`).join('')}
-            </ul>
-            <div class="tariff__content">
-                <div>
-                    <p class="tariff__content-day">Пн-Чт</p>
-                    <div class="tariff__content-divider"></div>
-                    <span class="tariff__content-price">${tariff.prices.weekdays}</span>
-                </div>
-                <div>
-                    <p class="tariff__content-day">Пт-ВС</p>
-                    <div class="tariff__content-divider"></div>
-                    <span class="tariff__content-price">${tariff.prices.weekends}</span>
-                </div>
-            </div>
-            <button class="button">
-                Забронировать игру
-                <div class="button__icon">
-                    <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
-                </div>
-            </button>
+           
         `;
 
         return card;
@@ -376,8 +448,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // appendTariffCards('tariffCardsContainer', tariffs);
-    // showTariffCards(0);
+    appendTariffCards('tariffCardsContainer', tariffs);
+    showTariffCards(0);
 
     // areaCards.forEach((item) => {
     //     const listItem = document.createElement("li");
