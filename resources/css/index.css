@@ -1,17 +1,33 @@
 @font-face {
     font-family: 'Audiowide';
     font-display: swap;
-    src: local('MuseoSansCyrl-400'),
+    src: local('Audiowide-400'),
         url('../assets/fonts/Audiowide-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Feature Mono';
+    font-family: 'Feature-Mono';
     font-display: swap;
     src: local('FeatureMono-400'),
         url('../assets/fonts/FeatureMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FeatureMono-Medium";
+    src: url("../assets/fonts/FeatureMono-Medium.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Igra Sans';
+    src: local('Igra Sans'), local('IgraSans'), url('../assets/fonts/Igrasans.woff2') format('woff2'), url('../assets/fonts/Igrasans.woff') format('woff'), url('../assets/fonts/Igrasans.ttf') format('truetype');
+    font-display: swap;
     font-weight: 400;
     font-style: normal;
 }
@@ -23,7 +39,7 @@
 }
 
 body {
-    font-family: 'Feature Mono', Fallback, sans-serif;
+    font-family: 'Feature-Mono', "FeatureMono-Medium", Fallback, sans-serif;
     background-color: #000;
 }
 
@@ -36,6 +52,7 @@ source {
 }
 
 .button {
+    font-family: Feature-Mono;
     display: flex;
     align-items: center;
     text-align: center;
@@ -43,7 +60,7 @@ source {
     margin-top: 31px;
     cursor: pointer;
     font-size: 15px;
-  background: url("../assets/icons/button/button.svg") center center / cover no-repeat;
+    background: url("../assets/icons/button/button.svg") center center / cover no-repeat;
     color: #fff;
     text-transform: uppercase;
     padding: 16px 28px;
@@ -59,6 +76,8 @@ source {
 }
 
 .title {
+    font-family: Igra Sans;
+    line-height: 74px;
     margin: 0 auto;
     color: #fff;
     width: 730px;
@@ -195,7 +214,7 @@ source {
 }
 
 .tariff  .tariff__cards:first-child .tariff__game-options {
-    width: 228px;
+    width: 217px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -281,6 +300,7 @@ source {
 }
 
 .tariff .tariff__cards .tariff-card .tariff__game-options .tariff__game-option {
+    font-family: Igra Sans;
     font-size: 13px;
     font-weight: 400;
     color: #fff;
@@ -293,9 +313,9 @@ source {
     margin-top: 31px;
     display: flex;
     flex-direction: column;
-    row-gap: 2px;
+    row-gap: 13px;
     background-color: #141720;
-    width: 277px;
+    width: 282px;
     border-radius: 8px;
     padding: 17px 16px;
     height: 112px;
@@ -313,6 +333,7 @@ source {
 }
 
 .tariff .tariff__cards .tariff-card .tariff__content .tariff__content-price {
+    font-family: Audiowide;
     font-size: 24px;
     color: #fff;
     font-weight: 400;
@@ -513,6 +534,7 @@ source {
     }
 
     .title {
+        line-height: 44px;
         font-size: 36px;
         width: 438px;
     }
@@ -663,13 +685,20 @@ source {
     }
 
     .title {
+        line-height: 38px;
         font-size: 24px;
         width: 327px;
     }
 
     .tariff .tariff__slider {
+        scrollbar-width: none;
         overflow-x: scroll;
+        overflow-y: hidden;
         width: 100%;
+    }
+
+    .tariff .tariff__slider::-webkit-scrollbar {
+        display: none;
     }
 
     .tariff .tariff__options .tariff-option.tariff-option_active::after {
@@ -692,6 +721,4 @@ source {
         font-size: 24px;
         width: 327px;
     }
-
-  
 }
