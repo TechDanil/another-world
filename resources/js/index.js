@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const cardList = document.getElementById('cardList');
+    const slider = document.querySelector('.tariff__slider');
     const tabOptions = document.querySelectorAll('.tariff__options .tariff-option');
     const tariffCards = document.querySelectorAll('.tariff__cards');
     const tariffOptions = document.getElementById('tariffOptions');
@@ -367,6 +368,54 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         ],
     ];
+
+    function handleScroll() {
+        const activeOption = document.querySelector('.tariff-option_active');
+        if (activeOption) {
+            const scrollLeft = activeOption.offsetLeft - (slider.offsetWidth - activeOption.offsetWidth) / 2;
+            slider.scrollLeft = scrollLeft;
+        }
+    }
+
+    function handleResize() {
+        const activeOption = document.querySelector('.tariff-option_active');
+        if (activeOption) {
+            const scrollLeft = activeOption.offsetLeft - (slider.offsetWidth - activeOption.offsetWidth) / 2;
+            slider.scrollLeft = scrollLeft;
+        }
+    }
+
+    let isDragging = false;
+    let startX;
+
+    slider.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        startX = event.pageX - slider.offsetLeft;
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDragging = false;
+        handleScroll();
+    });
+
+    slider.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+        const x = event.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = slider.scrollLeft - walk;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDragging = false;
+        handleScroll();
+    });
+
+    slider.addEventListener('wheel', function (event) {
+        event.preventDefault();
+        slider.scrollLeft += event.deltaY;
+    });
+
+    window.addEventListener('resize', handleResize);
     
     function createTariffCard(tariff) {
         const card = document.createElement('li');
@@ -446,10 +495,16 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selectedContainer) {
             selectedContainer.style.display = '';
         }
+
+        handleResize();
+        handleScroll();
     }
 
     appendTariffCards('tariffCardsContainer', tariffs);
     showTariffCards(0);
+
+    handleResize();
+    handleScroll();
 
     // areaCards.forEach((item) => {
     //     const listItem = document.createElement("li");
