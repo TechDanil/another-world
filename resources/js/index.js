@@ -398,22 +398,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
             576: {
                 slidesPerView: 1,
+                spaceBetween: 12,
             },
 
             767: {
                 slidesPerView: 1,
+                spaceBetween: 40,
             },
 
             992: {
                 slidesPerView: 1,
+                spaceBetween: 40,
             },
 
             1200: {
                 slidesPerView: 1,
+                spaceBetween: 40,
             },
             
             1400: {
                 slidesPerView: 2,
+                spaceBetween: 40,
             },
         },
     });
