@@ -725,6 +725,8 @@ source {
     padding-top: 120px;
   }
 
+  /* calc(100% + -30px) */
+
   .tariff .tariff__cards {
     display: grid;
     grid-template-columns: minmax(304px, auto);
@@ -867,6 +869,16 @@ source {
   }
 }
 
+@media (max-width: 744px) {
+  .swiper-button-prev {
+    right: calc(100% - 30px);
+  }
+
+  .swiper-button-next {
+    left: calc(100% - 30px);
+  }
+}
+
 @media (max-width: 576px) {
   .container {
     width: 100%;
@@ -972,7 +984,6 @@ source {
     left: 21px;
   }
 }
-
 
 
 @media (max-width: 412px) {
