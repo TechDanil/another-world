@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let swiper = null;
   const cardList = document.getElementById("cardList");
   const slider = document.querySelector(".tariff__slider");
   const tabOptions = document.querySelectorAll(
@@ -373,60 +374,77 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   ];
 
-    const swiper = new Swiper(document.querySelector(".swiper"), {
-        slidesPerView: 2,
-        spaceBetween: 40,
-        watchSlidesProgress: true,
-        loopAdditionalSlides: 2,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+  function initSwiper() {
+
+    swiper = new Swiper(document.querySelector(".swiper"), {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      watchSlidesProgress: true,
+      loopAdditionalSlides: 2,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      on: {
+        init: (swiper) => {
+          swiper.loopFix();
         },
-
-        on: {
-            init: (swiper) => {
-                swiper.loopFix();
-            },
+      },
+  
+      breakpoints: {
+        375: {
+          slidesPerView: 1,
+          loop: true,
+          spaceBetween: 12,
         },
-
-        breakpoints: {
-            375: {
-                slidesPerView: 1,
-                loop: true,
-                spaceBetween: 12,
-            },
-
-            576: {
-                slidesPerView: 1,
-                loop: false,
-                spaceBetween: 12,
-            },
-
-            767: {
-                slidesPerView: 1,
-                loop: false,
-                spaceBetween: 40,
-            },
-
-            992: {
-                slidesPerView: 1,
-                loop: false,
-                spaceBetween: 40,
-            },
-
-            1200: {
-                slidesPerView: 1,
-                loop: false,
-                spaceBetween: 40,
-            },
-            
-            1400: {
-                slidesPerView: 2,
-                loop: false,
-                spaceBetween: 40,
-            },
+  
+        576: {
+          slidesPerView: 1,
+          loop: false,
+          spaceBetween: 12,
         },
+  
+        767: {
+          slidesPerView: 1,
+          loop: false,
+          spaceBetween: 40,
+        },
+  
+        992: {
+          slidesPerView: 1,
+          loop: false,
+          spaceBetween: 40,
+        },
+  
+        1200: {
+          slidesPerView: 1,
+          loop: false,
+          spaceBetween: 40,
+        },
+  
+        1400: {
+          slidesPerView: 2,
+          loop: false,
+          spaceBetween: 40,
+        },
+      },
     });
+  }
+
+  function destroySwiper() {
+    if (swiper !== null) {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
+  }
+
+  initSwiper();
+
+  window.addEventListener("resize", function () {
+    destroySwiper();
+    initSwiper();
+  });
 
   function handleScroll() {
     const activeOption = document.querySelector(".tariff-option_active");
@@ -494,30 +512,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p class="tariff__descr">${tariff.description}</p>
                 <ul class="tariff__game-options">
                     ${tariff.options
-                      .map(
-                        (option) =>
-                          `<li class="tariff__game-option">${option}</li>`
-                      )
-                      .join("")}
+        .map(
+          (option) =>
+            `<li class="tariff__game-option">${option}</li>`
+        )
+        .join("")}
                 </ul>
                 <div class="tariff__content">
                     <div>
-                        ${
-                          tariff.days.weekday
-                            ? `<p class="tariff__content-day">${tariff.days.weekday}</p>
+                        ${tariff.days.weekday
+        ? `<p class="tariff__content-day">${tariff.days.weekday}</p>
                             <div class="tariff__content-divider"></div>
                             <span class="tariff__content-price">${tariff.prices.weekdays}</span>`
-                            : ""
-                        }
+        : ""
+      }
                     </div>
                     <div>
-                        ${
-                          tariff.days.weekend
-                            ? `<p class="tariff__content-day">${tariff.days.weekend}</p>
+                        ${tariff.days.weekend
+        ? `<p class="tariff__content-day">${tariff.days.weekend}</p>
                             <div class="tariff__content-divider"></div>
                             <span class="tariff__content-price">${tariff.prices.weekends}</span>`
-                            : ""
-                        }
+        : ""
+      }
                     </div>
                 </div>
                 <button class="button">
