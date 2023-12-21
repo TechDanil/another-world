@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="resources/css/index.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <title>Another world</title>
 </head>
 
@@ -18,6 +17,104 @@
         <video class="hero__video" controls>
           <source src="resources/assets/videos/file_example_MP4_1280_10MG.mp4" type="video/mp4" />
         </video>
+      </div>
+    </section>
+
+    <section class="events">
+      <div class="container">
+        <h2 class="title">Организуем любое ваше мероприятие</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="events__list-item">
+                  <div class="events__list-item__icon">
+                    <span>01</span>
+                    <img src="./resources/assets/pictures/events/corporate.png" alt="corporate">
+                  </div>
+                  <h3 class="events__list-item__title">Корпоратив</h3>
+                  <p class="events__list-item__descr">Устройте турнир внутри компании</p>
+                  <p class="events__list-item__text">
+                    Это прекрасная возможность собрать всех друзей и семью вместе, чтобы весело провести время и отметить
+                    особый день. Вся арена будет исключительно для вас и ваших гостей. Вы можете принести свою еду и
+                    напитки.
+                  </p>
+                  <button class="button">
+                    Забронировать игру
+                    <div class="button__icon">
+                        <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="events__list-item">
+                  <div class="events__list-item__icon">
+                    <span>02</span>
+                    <img src="./resources/assets/pictures/events/birthday.png" alt="birthday">
+                  </div>
+                  <h3 class="events__list-item__title">День рождения</h3>
+                  <p class="events__list-item__descr">Сделаем этот день незабываемым</p>
+                  <p class="events__list-item__text">
+                    Соберите своих коллег в виртуальном мире, где вас ждет яркий игровой опыт и новые впечатления! Играйте команда на команду и обменивайтесь впечатлениями.  Вся арена будет для вас и ваших коллег..
+                  </p>
+                  <button class="button">
+                    Забронировать игру
+                    <div class="button__icon">
+                        <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+                    </div>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <div class="events__list-item">
+                  <div class="events__list-item__icon">
+                    <span>03</span>
+                    <img src="./resources/assets/pictures/events/birthday.png" alt="birthday">
+                  </div>
+                  <h3 class="events__list-item__title">День рождения</h3>
+                  <p class="events__list-item__descr">Сделаем этот день незабываемым</p>
+                  <p class="events__list-item__text">
+                    Это прекрасная возможность собрать всех друзей и семью вместе, чтобы весело провести время и отметить
+                    особый день. Вся арена будет исключительно для вас и ваших гостей. Вы можете принести свою еду и
+                    напитки.
+                  </p>
+                  <button class="button">
+                    Забронировать игру
+                    <div class="button__icon">
+                        <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+                    </div>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <div class="events__list-item">
+                  <div class="events__list-item__icon">
+                    <span>04</span>
+                    <img src="./resources/assets/pictures/events/birthday.png" alt="birthday">
+                  </div>
+                  <h3 class="events__list-item__title">День рождения</h3>
+                  <p class="events__list-item__descr">Сделаем этот день незабываемым</p>
+                  <p class="events__list-item__text">
+                    Это прекрасная возможность собрать всех друзей и семью вместе, чтобы весело провести время и отметить
+                    особый день. Вся арена будет исключительно для вас и ваших гостей. Вы можете принести свою еду и
+                    напитки.
+                  </p>
+                  <button class="button">
+                    Забронировать игру
+                    <div class="button__icon">
+                        <img src="./resources/assets/icons/button/button-icon.svg" alt="стрелки">
+                    </div>
+                  </button>
+                </div>
+              </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
       </div>
     </section>
 
@@ -56,7 +153,7 @@
               </li>
             </div>
 
-          <div class="gallery__pictures-firstRow__right">
+            <div class="gallery__pictures-firstRow__right">
               <li class="gallery__pictures-item">
                 <img src="./resources/assets/pictures/gallery/team-second.png" alt="вторая команда">
               </li>
@@ -93,6 +190,7 @@
     <br />
   </main>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./resources/js/index.js"></script>
 </body>
 
